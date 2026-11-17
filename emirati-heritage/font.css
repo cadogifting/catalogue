@@ -1,0 +1,5 @@
+/* The typeface, in one place. Montserrat stands in for Proxima Nova, as the Brand Book allows.
+   To change the typeface, change the file this line loads (for example a licensed Proxima Nova
+   stylesheet with its own @font-face rules) and the family name below. */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
+:root{--font:"Montserrat",Helvetica,Arial,sans-serif}
