@@ -300,7 +300,7 @@ window.CADO = {
    "tier": "boardroom",
    "theme": "coffee",
    "chapter": "majlis",
-   "no": "05",
+   "no": "06",
    "name": "Dallah Box",
    "line": "A silver-tone dallah, six painted cups and sweets, in a box patterned with UAE-inspired geometry.",
    "alt": "Open white box with a silver-tone dallah, six painted Arabic coffee cups and two trays of sweets",
@@ -342,7 +342,34 @@ window.CADO = {
      1.0
     ],
     "bg": "#c1c3bb"
-   }
+   },
+   "gallery": [
+    {
+     "w": 1280,
+     "h": 853,
+     "bg": "#887e66"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#c5b692"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#9d9d99"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#bdbdbd"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#bdafa8"
+    }
+   ]
   },
   {
    "id": "CAD-00010",
@@ -350,7 +377,7 @@ window.CADO = {
    "tier": "relationships",
    "theme": "coffee",
    "chapter": "majlis",
-   "no": "06",
+   "no": "07",
    "name": "Khoos, Talli & Sadu Box",
    "line": "Coffee, cups and dates in a box woven with the three traditional crafts of the Emirates.",
    "alt": "Wooden box with woven palm and Sadu bands, holding a coffee jar, cups and a tray of dates",
@@ -397,7 +424,7 @@ window.CADO = {
    "tier": "relationships",
    "theme": "coffee",
    "chapter": "majlis",
-   "no": "07",
+   "no": "08",
    "name": "Coffee & Dates Box",
    "line": "Decorated cups, a coffee caddy and a tray of dates, in dark wood with gold detail.",
    "alt": "Open wooden box with a coffee caddy and a compartment of dates",
@@ -537,7 +564,7 @@ window.CADO = {
    "tier": "relationships",
    "theme": "oud",
    "chapter": "oud",
-   "no": "03",
+   "no": "06",
    "name": "Medkhan Box",
    "line": "A mother-of-pearl incense burner, oud and a crystal bowl of halwa.",
    "alt": "White box with a green mother-of-pearl incense burner, a small gift of oud and a bowl of halwa topped with pistachio",
@@ -579,7 +606,34 @@ window.CADO = {
      1.0
     ],
     "bg": "#ede3cb"
-   }
+   },
+   "gallery": [
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#efe2c4"
+    },
+    {
+     "w": 1280,
+     "h": 853,
+     "bg": "#8d8e7e"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#e6d2aa"
+    },
+    {
+     "w": 1280,
+     "h": 853,
+     "bg": "#b0b2b2"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#ded2ae"
+    }
+   ]
   },
   {
    "id": "CAD-00025",
@@ -587,7 +641,7 @@ window.CADO = {
    "tier": "partners",
    "theme": "oud",
    "chapter": "oud",
-   "no": "04",
+   "no": "07",
    "name": "Heritage Gift Set",
    "line": "A mabkhara, perfume, woven palm and Sadu cloth: the crafts of the Emirati home in one box.",
    "alt": "Box with a traditional incense burner, a fragrance bottle, a woven palm-frond piece and a Sadu textile",
@@ -634,7 +688,7 @@ window.CADO = {
    "tier": "partners",
    "theme": "oud",
    "chapter": "oud",
-   "no": "05",
+   "no": "08",
    "name": "Emerald Fragrance Box",
    "line": "A gold-tone mabkhara, bakhoor and a bottle of perfume, in emerald green.",
    "alt": "Emerald-green box with a gold-tone incense burner, a jar of bakhoor and an amber perfume bottle",
@@ -681,7 +735,7 @@ window.CADO = {
    "tier": "partners",
    "theme": "oud",
    "chapter": "oud",
-   "no": "06",
+   "no": "09",
    "name": "Velvet Heritage Box",
    "line": "A decorated mabkhara and stuffed dates, in a cream velvet box.",
    "alt": "Cream velvet box holding a wooden mabkhara, a clear container and a tray of stuffed dates",
@@ -728,7 +782,7 @@ window.CADO = {
    "tier": "partners",
    "theme": "oud",
    "chapter": "oud",
-   "no": "07",
+   "no": "10",
    "name": "Metallic Heritage Box",
    "line": "Stuffed dates, a black and gold mabkhara and oud chips, under a silver and gold lid.",
    "alt": "Silver and gold patterned box holding stuffed dates, a black and gold incense burner and oud chips",
@@ -775,7 +829,7 @@ window.CADO = {
    "tier": "relationships",
    "theme": "sweets",
    "chapter": "union",
-   "no": "01",
+   "no": "05",
    "name": "Trio Box",
    "line": "Three crystal bowls of traditional sweets, each under a cover with UAE-inspired artwork.",
    "alt": "Three round crystal bowls of sweets, one with a cover patterned in red, green, white and black",
@@ -817,7 +871,29 @@ window.CADO = {
      1.0
     ],
     "bg": "#918e87"
-   }
+   },
+   "gallery": [
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#8a8561"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#e5d7b7"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#717273"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#c8c8c6"
+    }
+   ]
   },
   {
    "id": "CAD-00003",
@@ -825,7 +901,7 @@ window.CADO = {
    "tier": "relationships",
    "theme": "sweets",
    "chapter": "union",
-   "no": "02",
+   "no": "05",
    "name": "Bowl Box",
    "line": "A porcelain bowl of chocolates and Rahash, in a box illustrated with UAE heritage artwork.",
    "alt": "White porcelain bowl filled with chocolates and Rahash under a clear cover",
@@ -867,7 +943,29 @@ window.CADO = {
      1.0
     ],
     "bg": "#dacea9"
-   }
+   },
+   "gallery": [
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#d5c39b"
+    },
+    {
+     "w": 1280,
+     "h": 853,
+     "bg": "#cbbd96"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#e9dcbd"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#c8bc9d"
+    }
+   ]
   },
   {
    "id": "CAD-00002",
@@ -875,7 +973,7 @@ window.CADO = {
    "tier": "relationships",
    "theme": "sweets",
    "chapter": "union",
-   "no": "03",
+   "no": "06",
    "name": "Coaster Box",
    "line": "Six leather coasters and sixteen sweets, in a box finished in red, green, white and black.",
    "alt": "Box of sixteen assorted sweets beside a black leather coaster with a red rim",
@@ -917,7 +1015,34 @@ window.CADO = {
      1.0
     ],
     "bg": "#c1c0a0"
-   }
+   },
+   "gallery": [
+    {
+     "w": 1280,
+     "h": 853,
+     "bg": "#887e66"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#ccb890"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#c6bfa6"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#dfdbd9"
+    },
+    {
+     "w": 1280,
+     "h": 1280,
+     "bg": "#d8c5a2"
+    }
+   ]
   },
   {
    "id": "CAD-00014",
@@ -925,7 +1050,7 @@ window.CADO = {
    "tier": "partners",
    "theme": "flag",
    "chapter": "union",
-   "no": "04",
+   "no": "07",
    "name": "UAE Flag Presentation Set",
    "line": "The national flag and two national emblems, laid in green velvet.",
    "alt": "Deep-green box holding a folded UAE flag and two small national emblems",
@@ -971,7 +1096,7 @@ window.CADO = {
    "tier": "partners",
    "theme": "flag",
    "chapter": "union",
-   "no": "05",
+   "no": "08",
    "name": "UAE Flag Day Gift Set: Dates & Flag",
    "line": "A desk flag, dates and a Sadu coaster, in a box dressed in the flag.",
    "alt": "Box with a miniature desk flag, a tray of dates and a Sadu-patterned coaster",
@@ -1017,7 +1142,7 @@ window.CADO = {
    "tier": "partners",
    "theme": "flag",
    "chapter": "union",
-   "no": "06",
+   "no": "09",
    "name": "UAE Flag Day Gift Set: Stationery",
    "line": "A desk flag, a notebook, a black and gold pen and a Sadu coaster.",
    "alt": "Box with a miniature desk flag, a notebook, a black and gold pen and a Sadu coaster",
@@ -1063,7 +1188,7 @@ window.CADO = {
    "tier": "partners",
    "theme": "flag",
    "chapter": "union",
-   "no": "07",
+   "no": "10",
    "name": "UAE Flag Day Gift Set: Dates & Honey",
    "line": "A desk flag, honey, Arabic coffee and dates, in green and gold.",
    "alt": "Green box with a miniature desk flag, a jar of honey, a coffee sachet and dates",

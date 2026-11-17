@@ -196,6 +196,14 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 .pp{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:0 clamp(28px,4vw,72px);align-items:start}
 .pp-fig{margin:0;position:sticky;top:calc(var(--bar) + 16px)}
 .pp-fig img{width:100%}
+.gal{display:flex;background:var(--sand);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain}
+.gal::-webkit-scrollbar{display:none}
+.gal img{flex:0 0 100%;width:100%;height:100%;object-fit:contain;scroll-snap-align:start}
+.gal-thumbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.gal-thumbs button{padding:0;border:0;background:none;cursor:pointer;width:56px;height:56px;opacity:.55;outline-offset:2px}
+.gal-thumbs button[aria-current]{opacity:1;box-shadow:0 0 0 1.5px var(--ink)}
+.gal-thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:519px){.gal-thumbs{gap:6px}.gal-thumbs button{width:44px;height:44px}}
 .pp-fig figcaption{margin-top:12px;font-size:13px;color:var(--ink-2)}
 .pp-info{padding:8px 0 0}
 .crumb{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:14px;margin:20px 0 28px}
@@ -229,7 +237,7 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 @media (max-width:899px){
   .pp{grid-template-columns:1fr}
   .pp-fig{position:static;margin:0 calc(var(--pad) * -1)}
-  .pp-fig figcaption{padding:0 var(--pad)}
+  .pp-fig figcaption,.gal-thumbs{padding:0 var(--pad)}
   .pp-info{padding-top:28px}
   .crumb{margin:16px 0 18px}
 }

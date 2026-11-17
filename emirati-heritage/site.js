@@ -302,6 +302,27 @@ function sheet(open){
   const b = $("#filters-btn"); if (b) b.setAttribute("aria-expanded", String(open));
 }
 
+/* Product page photos. One photo as before; where editorial.json chose more (p.gallery), a strip
+   that swipes on a phone, with thumbnails beneath. Every photo is shown whole, in a frame the shape
+   of the main photo; a photo of another shape sits on the sand colour. */
+function figPhotos(p){
+  const one = `<img src="${img(p.id)}" alt="${esc(p.alt)}" width="${p.img.w}" height="${p.img.h}">`;
+  if (!p.gallery?.length) return one;
+  const all = [{src: img(p.id), w: p.img.w, h: p.img.h, bg: p.img.bg, alt: p.alt}]
+    .concat(p.gallery.map((g, k) => ({src: `${DATA}images/${p.id}-${k + 2}.jpg`, w: g.w, h: g.h, bg: g.bg, alt: `${p.name}, photo ${k + 2}`})));
+  const n = all.length;
+  return `<div class="gal" style="aspect-ratio:${(p.img.w / p.img.h).toFixed(4)}" tabindex="0" role="region" aria-label="Photos of ${esc(p.name)}, ${n} in all">
+      ${all.map((g, k) => `<img src="${g.src}" alt="${esc(g.alt)}" width="${g.w}" height="${g.h}"${k ? ' loading="lazy"' : ""}>`).join("")}
+    </div>
+    <div class="gal-thumbs">${all.map((g, k) => `<button type="button" data-gal="${k}" aria-label="Show photo ${k + 1} of ${n}"${k ? "" : ' aria-current="true"'}><img src="${g.src}" alt="" loading="lazy"></button>`).join("")}</div>`;
+}
+const galShow = k => { const g = $(".gal"); if (g) g.scrollTo({left: k * g.clientWidth, behavior: "smooth"}); };
+document.addEventListener("scroll", e => {
+  if (!e.target.classList?.contains("gal")) return;
+  const g = e.target, k = Math.round(g.scrollLeft / g.clientWidth);
+  $$(".gal-thumbs button").forEach((b, i) => b.toggleAttribute("aria-current", i === k));
+}, true);
+
 /* Product page */
 function renderProduct(p){
   const c = p._c, t = tierOf(p), th = themeOf(p), list = ordered(c), i = list.indexOf(p);
@@ -316,7 +337,7 @@ function renderProduct(p){
     <nav class="crumb" aria-label="Breadcrumb"><a href="#/c/${c.key}">${esc(full(c))}</a>${t ? `<a href="#/c/${c.key}/tier-${t.key}">${esc(t.title)}</a>` : ""}</nav>
     <article class="pp">
       <figure class="pp-fig">
-        ${p.img ? `<img src="${img(p.id)}" alt="${esc(p.alt)}" width="${p.img.w}" height="${p.img.h}">` : photo(p)}
+        ${p.img ? figPhotos(p) : photo(p)}
         <figcaption>Images show the standard design. Your gifts are finished with your logo.</figcaption>
       </figure>
       <div class="pp-info">
@@ -500,6 +521,8 @@ function refreshAddButtons(){
 
 /* Events */
 document.addEventListener("click", async e => {
+  const gb = e.target.closest("[data-gal]");
+  if (gb){ galShow(+gb.dataset.gal); return; }
   const add = e.target.closest("[data-add]");
   if (add){
     const p = byId(add.dataset.add);
