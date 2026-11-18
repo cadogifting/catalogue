@@ -221,12 +221,13 @@ function renderHome(c){
   const occs = [...new Set(c.products.flatMap(p => p.occasions || []))];
   const delivIncl = c.products.some(p => /included/i.test(p.spec?.Delivery || ""));
   app.innerHTML = `
-  <section class="cover" aria-labelledby="cover-h"><div class="cover-grid">
+  <section class="cover${CFG.cover === "light" ? " light" : ""}" aria-labelledby="cover-h"><div class="cover-grid">
     <div class="cover-text">
       <p class="run"><span>CADO corporate gifts</span><span>${esc(c.eyebrow || "")}</span></p>
-      <div class="cover-title"><img class="cover-mono" src="assets/monogram-creme.svg" alt="" width="40" height="52">
+      <div class="cover-title"><img class="cover-mono" src="assets/monogram-${CFG.cover === "light" ? "coal" : "creme"}.svg" alt="" width="40" height="52">
         <h1 id="cover-h">${esc(c.title)} <span class="thin">${esc(c.year)}</span></h1></div>
       <p class="lede">${esc(c.line)}</p>
+      <p class="facts-line num">AED ${fmt(lo)} to ${fmt(hi)} per gift, excluding VAT · Your logo on every piece</p>
     </div>
     <div class="cover-collage">${collageHTML(c, cov)}</div>
   </div></section>
@@ -247,7 +248,6 @@ function renderHome(c){
     </form>
   </div></div>
   <div class="wrap">
-    <p class="facts-line num">AED ${fmt(lo)} to ${fmt(hi)} per gift, excluding VAT · Your logo on every piece</p>
     <div class="tools-sum" id="tools-sum" aria-live="polite"></div>
   </div>
   <div id="tiers"></div>

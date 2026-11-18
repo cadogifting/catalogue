@@ -315,21 +315,34 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
 .vh{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* Short cover: monogram and title on one line; the collage only on wider screens */
-.cover-grid{grid-template-columns:minmax(0,8fr) minmax(0,4fr);align-items:center}
-.cover-text{padding:24px 40px 32px var(--pad)}
+.cover-grid{grid-template-columns:minmax(0,8fr) minmax(0,4fr);align-items:center;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.cover-text{padding:24px 40px 32px 0;max-width:none;margin-left:0}
 .cover-title{display:flex;align-items:center;gap:18px;margin-top:28px}
 .cover-title .cover-mono{width:40px;margin:0;flex:none}
 .cover h1{font-size:clamp(40px,5.6vw,84px);line-height:1}
 .cover h1 .thin{display:inline}
 .cover .lede{margin:16px 0 0;font-size:clamp(16px,1.3vw,19px);max-width:34em}
-.cover-collage{padding:20px var(--pad) 20px 0;align-self:center}
+.cover-collage{padding:20px 0;align-self:center}
 @media (max-width:899px){
   .cover-grid{grid-template-columns:1fr}
-  .cover-text{padding:18px var(--pad) 24px}
+  .cover-text{padding:18px 0 24px}
   .cover-title{margin-top:20px;gap:14px}
   .cover-title .cover-mono{width:32px}
   .cover-collage{display:none}
 }
+
+/* Light cover (config.js cover: "light"): CADO creme with coal type, the Brand Book's lead pairing.
+   A coal rule above the running line, as on CADO's printed cards; the terracotta budget band below
+   is then the first block of colour. */
+.cover.light{background:var(--creme);color:var(--coal)}
+.cover.light .run{color:var(--ink-2);border-top:1px solid var(--coal);padding-top:12px}
+.cover.light .lede{color:var(--ink-2)}
+.cover.light .cover-collage .ph{background:var(--sand)}
+/* Some photos carry a pale frame about 2% wide on each side; on the cover it shows as a
+   light line against creme. The cover trims it by enlarging each photo 5% inside its frame. */
+.cover-collage .ph img{transform:scale(1.05)}
+.cover-collage .ph:hover img{transform:scale(1.075)}
+@media (max-width:599px){.cover .run{flex-direction:column;gap:2px}}
 
 /* Shop bar: sticky under the header */
 .shop{position:sticky;top:var(--bar);z-index:15;background:var(--creme);box-shadow:0 1px 0 rgba(36,36,36,.08)}
@@ -355,7 +368,9 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
   .sheet-head{display:flex;justify-content:space-between;align-items:center;font-size:18px}
   .sheet-show{display:inline-flex}
 }
-.facts-line{margin:14px 0 0;font-size:13px;color:var(--ink-2)}
+.facts-line{margin:14px 0 0;font-size:13px;color:var(--on-dark)}
+.cover.light .facts-line{color:var(--ink-2)}
+.tier:first-child{margin-top:clamp(20px,2.4vw,32px)}
 .tools-sum{margin:10px 0 0}
 .tools-sum:empty{display:none}
 

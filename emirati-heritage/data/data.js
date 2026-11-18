@@ -12,8 +12,8 @@ window.CADO = {
   "opening": "CAD-00014",
   "collage": [
    "CAD-00014",
-   "CAD-00017",
-   "CAD-00020"
+   "CAD-00030",
+   "CAD-00025"
   ]
  },
  "tiers": [
